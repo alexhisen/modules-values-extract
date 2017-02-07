@@ -1,6 +1,6 @@
 {
   "name": "modules-values-extract",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Extracts all CSS Module @values from a list of css files into an object",
   "dependencies": {
     "postcss-modules-values-replace": "git://github.com/alexhisen/postcss-modules-values-replace"
