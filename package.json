@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "Extracts all CSS Module @values from a list of css files into an object",
   "dependencies": {
-    "postcss-modules-values-replace": "git://github.com/alexhisen/postcss-modules-values-replace",
+    "postcss-modules-values-replace": "git://github.com/alexhisen/postcss-modules-values-replace"
   },
   "devDependencies": {
     "eslint": "^3.7.1",
     "eslint-config-airbnb": "^14.0.0",
-    "eslint-plugin-import": "^2.0.0",
+    "eslint-plugin-import": "^2.0.0"
   },
   "peerDependencies": {
-    "postcss": "^5.2.5",
+    "postcss": "^5.2.5"
   },
   "files": [
     "index.js",
