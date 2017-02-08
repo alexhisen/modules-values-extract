@@ -27,8 +27,11 @@ function extractValues(options = {}) {
       promises.push(processor
         .process(css, { from: file, to: `${file}.js` })
         .then(result => {
-          if (result.messages[0]) {
-            Object.assign(variables, result.messages[0].value);
+          if (result.messages.length) {
+            const values = result.messages
+              .filter(message => message.type === moduleValuesPlugin.messageType)
+              .map(message => message.value)
+            Object.assign(variables, ...values);
           }
         }));
     });
