@@ -27,8 +27,11 @@ function extractValues(options = {}) {
       promises.push(processor
         .process(css, { from: file, to: `${file}.js` })
         .then(result => {
-          if (result.messages[0]) {
-            Object.assign(variables, result.messages[0].value);
+          if (result.messages.length) {
+            const foundValues = result.messages
+              .filter((message) => message.plugin === 'postcss-modules-values-replace' && message.type === 'values')
+              .map((message) => message.values);
+            Object.assign(variables, ...foundValues); // in theory we support multiple messages from the plugin
           }
         }));
     });
