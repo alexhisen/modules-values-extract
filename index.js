@@ -1,7 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const fs = require('fs');
 const postcss = require('postcss');
-const moduleValuesPlugin = require('postcss-modules-values-replace');
+let moduleValuesPlugin = require('postcss-modules-values-replace');
+moduleValuesPlugin = moduleValuesPlugin.default || moduleValuesPlugin;
 
 /**
  * Extracts all CSS Module @values from a list of css files into an object.
