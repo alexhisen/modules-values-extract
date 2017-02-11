@@ -58,3 +58,9 @@ config = {
 Note that the above module.exports in wepback.config.js is actually a Promise that resolves to the config object, not the config object itself.
 
 This requires webpack-dev-server 2.x or 1.16.3+.
+
+It is also probably not supported by the babel webpack-alias plugin.
+
+## Example Project
+
+[https://github.com/alexhisen/mobx-forms-demo](https://github.com/alexhisen/mobx-forms-demo)
